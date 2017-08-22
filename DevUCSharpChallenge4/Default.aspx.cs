@@ -29,7 +29,7 @@ namespace DevUCSharpChallenge4
                 mySpan = (secondDate - firstDate);
             }
 
-            resultLabel.Text = "There are " + mySpan + " days between those two dates.";
+            resultLabel.Text = "There are " + mySpan.Days + " days between those two dates.";
         }
     }
 }
