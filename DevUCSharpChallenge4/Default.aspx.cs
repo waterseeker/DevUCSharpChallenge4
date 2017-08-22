@@ -13,5 +13,23 @@ namespace DevUCSharpChallenge4
         {
 
         }
+
+        protected void okButton_Click(object sender, EventArgs e)
+        {
+            DateTime firstDate = Calendar1.SelectedDate;
+            DateTime secondDate = Calendar2.SelectedDate;
+            TimeSpan mySpan = new TimeSpan();
+
+            if (firstDate > secondDate)
+            {
+                mySpan = (firstDate - secondDate);
+            }
+            else
+            {
+                mySpan = (secondDate - firstDate);
+            }
+
+            resultLabel.Text = "There are " + mySpan + " days between those two dates.";
+        }
     }
 }
